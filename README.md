@@ -21,10 +21,6 @@
 * WHEN I open the weather dashboard
 * THEN I am presented with the last searched city forecast
 
-## Demonstrating the application functionality:
-
-<!-- ![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png) -->
-
 ## URL of the Deployed Application and Repo
 * https://tracy80s2003.github.io/weather-dashboard/
 * https://github.com/tracy80s2003/weather-dashboard
