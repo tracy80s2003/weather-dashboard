@@ -21,6 +21,10 @@
 * WHEN I open the weather dashboard
 * THEN I am presented with the last searched city forecast
 
+## Screenshot
+
+<img src="./assets/images/weather.png" />
+
 ## URL of the Deployed Application and Repo
 * https://tracy80s2003.github.io/weather-dashboard/
 * https://github.com/tracy80s2003/weather-dashboard
