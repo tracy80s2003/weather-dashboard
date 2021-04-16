@@ -21,8 +21,8 @@ $("#searchBtn").on("click", function() {
   $("#searchTerm").val("");  
 
   // full url to call api
-  const dailyURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
-  const queryUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
+  const dailyURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
+  const queryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
   // $.ajax({
   //   url: queryUrl,
