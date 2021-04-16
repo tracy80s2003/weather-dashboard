@@ -21,8 +21,8 @@ $("#searchBtn").on("click", function() {
   $("#searchTerm").val("");  
 
   // full url to call api
-  const dailyURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
-  const queryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
+  const dailyURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
+  const queryUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
   // $.ajax({
   //   url: queryUrl,
@@ -34,7 +34,7 @@ $("#searchBtn").on("click", function() {
     console.log(data)
     let longitude = data.coord.lon
     let latitude = data.coord.lat
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
     .then(res => res.json())
     .then(uvData => {
       console.log(uvData)
@@ -79,7 +79,7 @@ function getCurrentConditions (currentData, UVData) {
 function getCurrentForecast () {
   
   $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + apiKey,
+    url: "http://api.openweathermap.org/data/2.5/forecast?q=" + city + apiKey,
     method: "GET"
   }).then(function (response){
 
@@ -114,7 +114,7 @@ function getCurrentForecast () {
         const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
         const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
 
-        const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png");
+        const image = $("<img>").attr("src", "http://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png");
 
         cardBody.append(cityDate, image, temperature, humidity);
         card.append(cardBody);
