@@ -68,10 +68,10 @@ function getCurrentConditions (currentData, UVData) {
     // get the temperature and convert to fahrenheit
   $("#city-name").text(currentData.name)
   // $("#current-pic").attr('src', '')
-  $("#temperature").text(currentData.main.temp + "°F")
-  $("#humidity").text(currentData.main.humidity + "Humid")
-  $("#wind-speed").text(currentData.wind.speed + "mi/h")
-  $("#UV-index").text(UVData.current.uvi)
+  $("#temperature").text("Temp: " + currentData.main.temp + "°F")
+  $("#humidity").text("Humidity: " + currentData.main.humidity + "%")
+  $("#wind-speed").text("Wind Speed: " + currentData.wind.speed + "mi/h")
+  $("#UV-index").text("UV-Index: " + UVData.current.uvi)
     // add to page
    
 }
